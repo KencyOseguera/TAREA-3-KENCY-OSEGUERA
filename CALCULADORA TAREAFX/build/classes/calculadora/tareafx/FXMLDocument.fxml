@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="313.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadora.tareafx.FXMLDocumentController">
+    <children>
+      <Pane prefHeight="120.0" prefWidth="313.0" style="-fx-background-color: #1A1B28;">
+         <children>
+            <Label fx:id="txtOperacion" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="25.0" prefHeight="32.0" prefWidth="289.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtResultado" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="62.0" prefHeight="42.0" prefWidth="289.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="120.0" prefHeight="363.0" prefWidth="313.0" style="-fx-background-color: #1A1B28;">
+         <children>
+            <Button fx:id="limpiar" layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#btn_limpiar" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="C" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnexp" layoutX="99.0" layoutY="23.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="^" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnporcentaje" layoutX="168.0" layoutY="23.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: #52C9DC;" text="\%" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btndiv" layoutX="239.0" layoutY="23.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="/" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="90.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="7" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="99.0" layoutY="90.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="8" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="157.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="4" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="224.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="1" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="290.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="0" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="170.0" layoutY="90.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="9" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnmulti" layoutX="239.0" layoutY="90.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="*" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="99.0" layoutY="157.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="5" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="99.0" layoutY="224.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="2" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="99.0" layoutY="290.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="." textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="170.0" layoutY="157.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="6" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="170.0" layoutY="224.0" mnemonicParsing="false" onAction="#computerProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #1E2435;" text="3" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnigual" layoutX="170.0" layoutY="290.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="=" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnmenos" layoutX="239.0" layoutY="157.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="-" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnsuma" layoutX="239.0" layoutY="220.0" mnemonicParsing="false" onAction="#operadorProcess" prefHeight="120.0" prefWidth="50.0" style="-fx-background-color: #52C9DC;" text="+" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="estu" layoutX="211.0" layoutY="489.0" mnemonicParsing="false" onAction="#InfoEstudiante" style="-fx-background-color: #ED802E;" text="Estudiante" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+    </children>
+</AnchorPane>
